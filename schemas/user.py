@@ -11,4 +11,4 @@ class UserSchema(ma.SQLAlchemyAutoSchema):
         load_only = ("password",)
         dump_only = ("id", "total_co2_saved", "total_usd_saved")
         load_instance = True
-        include_fk=True
+        include_fk = True

@@ -35,8 +35,8 @@ class Route(Resource):
     def put(cls):
         user_json = request.get_json()
         route = RouteModel.end_route(user_json["route_id"],
-                                            user_json["end_latitude"],
-                                            user_json["end_longitude"])
+                                     user_json["end_latitude"],
+                                     user_json["end_longitude"])
 
         return jsonify({"route_length": route.miles_travelled,
                         "co2_saved": route.co2_saved,
